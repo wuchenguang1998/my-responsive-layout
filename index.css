@@ -1,0 +1,243 @@
+.header-container{
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadada;
+}
+.header-logo-container,
+.header-btn-container,
+.header-nav-container{
+    height: 64px;
+}
+.header-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-container{
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: -1px;              /* 解决收起时有两个边框的问题 */
+    border-bottom: 1px solid #dadada;
+    transition: height 0.5s;
+}
+.nav-container-extended{    /* 在js中最好不要直接让它的高度变化，而是设置另外一种样式 */
+    top:0;
+    height: 201px;
+}
+
+.slider-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.slider-container .row{
+    background-color: #f5f5f5;
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (min-width:768px){
+    .slider-container .row{
+        display: flex;
+        align-items: center;
+    }
+}
+.slider-text-container{
+    padding: 20px 0;
+}
+.btn-rounded{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn-rounded:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+
+
+.btn-toggle{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-toggle:hover{
+    background-color: #f9f9f9;
+}
+.btn-toggle-bar{
+    display: block;
+    width: 24px;
+    height: 4px;
+    background-color: #363636;
+    border-radius: 2px;
+}
+.btn-toggle-bar+.btn-toggle-bar{
+    margin-top: 4px;
+}
+.btn-toggle:hover .btn-toggle-bar{
+    background-color: #1424a0;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    width: 136px;
+    height: 100%;
+}
+.header-nav,
+.header-nav-item,
+.header-nav-link{
+    height: 100%;
+}
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+.header-nav-item{
+    margin-left: 24px;
+}
+.header-nav-item:first-child{
+    margin-left: 0px;
+}
+.header-nav-link{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.nav-link{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.slider-title,
+.slider-subtitle,
+.slider-btns{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.slider-title{
+    font-size: 30px;
+
+}
+.slider-subtitle{
+    font-size: 20px;
+    font-weight: normal;
+}
+.slider-btns .btn-rounded{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.slider-btns .btn-rounded:last-child{
+    margin-right: 0;
+}
+
+
+.product-item{
+    overflow: hidden;
+    display: block;
+}
+.product-img {
+    transition: transform 1s;
+}
+.product-img:hover {
+    transform: scale(1.2);     /* CSS3转换，整体缩放1.2倍 */
+}
+.backtop-container{
+    margin: 20px 0;
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    width: 100%;
+    height: 60px;
+}
+.backtop-container .btn-backtop{
+    margin-top: 0;              /* display: block之后，a标签居然有上外边距，导致设置行高不能垂直居中 */
+    font-size: 20px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+}
+.helper-container{
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+.btn-backtop{
+    margin-top: 5px 0 15px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.helper-info-container{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.helper-list li{
+    height: 30px;
+}
+.helper-list li a{
+    line-height: 30px;
+}
+.btn-share {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+}
+.btn-share-weixin {
+    background-image: url(img/weixin.svg);
+}
+.btn-share-weixin:hover {
+    background-image: url(img/weixin-hover.svg);
+}
+.btn-share-weibo {
+    background-image: url(img/weibo.svg);
+}
+.btn-share-weibo:hover {
+    background-image: url(img/weibo-hover.svg);
+}
+.btn-share{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.footer-container{
+    padding: 10px 0;
+    background-color: #363636;
+}
+.footer-container ul{
+    display: flex;
+}
+.footer-container .footer-link{
+    color: #ffffff;
+    font-weight: bold;
+}
+.footer-container .container .row div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+}
+@media (max-width:768px){          /* 媒体查询，在小屏及超小屏情况下，该div容器左对齐 */
+    .footer-container .container .row div:nth-child(2){
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+    }
+}
+.footer-container .container .row div ul li:nth-child(2),
+.footer-container .container .row div ul li:nth-child(3){
+    margin-left: 35px;
+    padding-bottom: 10px;
+}
+.footer-container .container div:last-child{
+    color: #a6a6a6;
+    font-size: 12px;
+}
